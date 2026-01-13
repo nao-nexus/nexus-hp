@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>清掃業｜法人与信対応 企業サイト</title>
+  <meta name="description" content="法人取引を前提とした清掃会社。定期清掃・施設清掃・引き渡し前清掃など、安定した体制で対応します。" />
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", Meiryo, sans-serif; margin: 0; color: #222; line-height: 1.7; }
+    header { background: #0f3b2e; color: #fff; padding: 48px 20px; }
+    header h1 { margin: 0 0 8px; font-size: 28px; }
+    header p { margin: 0; opacity: 0.95; }
+    section { padding: 48px 20px; max-width: 980px; margin: 0 auto; }
+    h2 { font-size: 22px; margin-bottom: 16px; border-left: 4px solid #0f3b2e; padding-left: 12px; }
+    h3 { font-size: 18px; margin-top: 24px; }
+    ul { padding-left: 20px; }
+    li { margin-bottom: 6px; }
+    .bg-light { background: #f6f8f7; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .card { background: #fff; padding: 20px; border-radius: 6px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); }
+    .cta { background: #0f3b2e; color: #fff; text-align: center; }
+    .cta a { display: inline-block; margin-top: 12px; padding: 12px 24px; background: #fff; color: #0f3b2e; text-decoration: none; border-radius: 4px; font-weight: bold; }
+    footer { background: #222; color: #ccc; padding: 24px 20px; font-size: 14px; }
+    footer p { margin: 4px 0; }
+    .note { font-size: 14px; color: #555; }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>継続して任せられる。法人取引を前提とした清掃会社です。</h1>
+  <p>施設・建物の清掃業務を主軸に、安定した体制と責任ある対応を行っています。</p>
+</header>
+
+<section>
+  <h2>私たちについて</h2>
+  <p>
+    私たちは清掃業務を通じて、取引先様の業務が滞りなく進む環境を支えることを使命としています。
+    単発対応ではなく、継続的な法人取引を前提とした運営体制を整え、
+    報告・連絡・対応品質を重視した業務を行っています。
+  </p>
+</section>
+
+<section class="bg-light">
+  <h2>事業内容</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>建物総合メンテナンス（主軸：清掃）</h3>
+      <ul>
+        <li>定期清掃（商業施設・店舗・ビル・病院 等）</li>
+        <li>空調設備管理（分解洗浄・設置）</li>
+        <li>炭化水素補填工事（株式会社ビジネスプロデュース アライアンスパートナー）</li>
+        <li>消毒・防菌作業</li>
+        <li>リフォーム工事</li>
+        <li>塗装工事</li>
+      </ul>
+      <p class="note">清掃業務を主軸とし、建物維持に必要な各種メンテナンスを法人様向けに提供しています。</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>法人取引で選ばれる理由</h2>
+  <ul>
+    <li>清掃業を主軸とした明確な事業内容</li>
+    <li>業務範囲・責任区分を明確にした対応</li>
+    <li>継続契約を前提とした運営体制</li>
+    <li>報告・連絡・相談を重視した業務フロー</li>
+    <li>管理会社・法人様との取引を想定した対応力</li>
+  </ul>
+  <p>
+    価格だけでなく、安定性・継続性・責任感を重視する法人様に
+    安心してご発注いただける体制を整えています。
+  </p>
+</section>
+
+<section class="bg-light">
+  <h2>法人様向け対応・取引条件</h2>
+  <ul>
+    <li>法人・管理会社との取引対応</li>
+    <li>定期契約・継続契約対応</li>
+    <li>業務内容の事前打ち合わせ</li>
+    <li>契約書締結対応</li>
+    <li>見積書・請求書発行対応</li>
+  </ul>
+  <p class="note">※取引条件の詳細は個別にご相談ください。</p>
+</section>
+
+<section>
+  <h2>業務体制・管理</h2>
+  <ul>
+    <li>担当者制による対応</li>
+    <li>業務内容の事前共有</li>
+    <li>作業後の確認・報告</li>
+    <li>情報管理・守秘意識の徹底</li>
+  </ul>
+</section>
+
+<section class="bg-light">
+  <h2>会社概要</h2>
+  <ul>
+    <li>会社名：株式会社Nexus innovation</li>
+    <li>代表者名：有本 康平</li>
+    <li>所在地：愛知県名古屋市中川区応仁町2-14 Brace 103</li>
+    <li>設立：2024年</li>
+    <li>事業内容：建物総合メンテナンス</li>
+    <li>主要取引形態：法人・管理会社</li>
+    <li>連絡先：052-990-2068</li>
+  </ul>
+</section>
+
+<section class="cta">
+  <h2>法人様からのお問い合わせ</h2>
+  <p>清掃業務のご相談・お見積り依頼は、お気軽にご連絡ください。</p>
+  <a href="#">お問い合わせはこちら</a>
+</section>
+
+<footer>
+  <p>© 株式会社Nexus innovation</p>
+  <p>All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
