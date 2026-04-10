@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>株式会社Nexus innovation｜建物総合メンテナンス</title>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+  font-family: "Noto Sans JP", "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  color: #111;
+  background: #fff;
+  line-height: 1.9;
+}
+
+    section {
+      padding: 100px 20px;
+    }
+
+    h2 {
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    /* ===== ヘッダー ===== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #ffffff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f2937;
+  text-decoration: none;
+}
+
+.logo img {
+  height: 48px;
+  width: auto;
+}
+
+    .nav ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav a {
+      color: #374151;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .nav a:hover {
+      color: #1e40af;
+    }
+
+    .nav .contact-btn {
+      background: #1e40af;
+      color: #fff;
+      padding: 8px 18px;
+      border-radius: 9999px;
+      font-size: 14px;
+    }
+
+    /* HERO */
+  #hero {
+  background: url("./hero.jpg") no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 120px 20px;
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+#hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.65)
+  );
+}
+
+#hero h1 {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.4;
+  margin-bottom: 36px;
+  max-width: 900px;
+}
+
+#hero p {
+  position: relative;
+  z-index: 1;
+  font-size: 22px;
+  font-weight: 300;
+  letter-spacing: 0.08em;
+  line-height: 2;
+  max-width: 700px;
+  opacity: 0.95;
+}
+
+    /* REASON */
+    .reason-list {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      gap: 40px;
+    }
+
+    .reason-item h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    /* SERVICE */
+    .service-list {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .service-item {
+      border: 1px solid #e5e5e5;
+      padding: 30px;
+    }
+
+    .service-item h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    /* COMPANY */
+    .company-table {
+      max-width: 900px;
+      margin: 0 auto;
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    .company-table th,
+    .company-table td {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 18px 20px;
+      font-size: 15px;
+      vertical-align: top;
+    }
+
+    .company-table th {
+      width: 30%;
+      background: #fafafa;
+      text-align: left;
+    }
+
+    /* CONTACT */
+    .contact-text {
+      text-align: center;
+      color: #555;
+      margin-bottom: 50px;
+    }
+
+    .contact-direct {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+
+    .contact-label {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .contact-value {
+      font-size: 22px;
+      font-weight: 600;
+      color: #111;
+      text-decoration: none;
+    }
+
+    .contact-button {
+      display: inline-block;
+      padding: 16px 40px;
+      border: 1px solid #111;
+      color: #111;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .contact-button:hover {
+      background: #111;
+      color: #fff;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#service {
+  background: #f8fafc;
+  padding: 100px 20px;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.service-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.service-card h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.service-card p {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #555;
+}
+
+#service h2 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-sub {
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #1e40af;
+  margin-top: -40px;
+  margin-bottom: 60px;
+  font-weight: 600;
+}
+
+/* ===== splash画面 ===== */
+#splash {
+  position: fixed;
+  inset: 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* ロゴ文字 */
+.splash-logo {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #111;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: splashFade 1.8s ease forwards;
+}
+
+/* アニメーション */
+@keyframes splashFade {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* フェードアウト */
+.splash-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#contact {
+  background: #f8fafc;
+}
+
+/* ===== フォント適用（Caslon風） ===== */
+
+/* HEROタイトル */
+#hero h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+}
+
+/* ヘッダーの会社名 */
+.logo span {
+  font-family: 'Libre Baskerville', serif;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+  </style>
+</head>
+
+<body>
+<div id="splash">
+  <div class="splash-logo">Nexus innovation</div>
+</div>
+<!-- ヘッダー追加 -->
+<header class="header">
+  <div class="header-inner">
+    <a href="#" class="logo">
+  <img src="logo.jpg" alt="Nexus innovationロゴ">
+  <span>Nexus innovation</span>
+</a>
+    <nav class="nav">
+      <ul>
+        <li><a href="#reason">選ばれる理由</a></li>
+        <li><a href="#service">事業内容</a></li>
+        <li><a href="#company">会社概要</a></li>
+        <li><a href="contact.html" class="contact-btn">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section id="hero">
+  <h1 class="fade-up">
+    建物の価値を、<br>
+    清潔と安心で支える。
+  </h1>
+  <p class="fade-up">
+    株式会社Nexus innovationは、<br>
+    建物総合メンテナンスのプロフェッショナルです。
+  </p>
+</section>
+
+<section id="reason" class="fade-up">
+  <h2>選ばれる理由</h2>
+  <p class="section-sub">Reason</p>
+  <div class="reason-list">
+    <div class="reason-item">
+      <h3>法人取引に対応した管理体制</h3>
+      <p>商業施設・医療機関・ビルなど、法人様向けの清掃・設備管理実績があります。</p>
+    </div>
+    <div class="reason-item">
+      <h3>幅広いメンテナンス対応力</h3>
+      <p>清掃から空調コストの改善、リフォームまで一括対応が可能です。</p>
+    </div>
+    <div class="reason-item">
+      <h3>信頼を第一にした対応</h3>
+      <p>安全・衛生・法令遵守を徹底し、長期的な信頼関係を築きます。</p>
+    </div>
+  </div>
+</section>
+
+<section id="service" class="fade-up">
+  <h2>事業内容</h2>
+  <p class="section-sub">Service</p>
+  <div class="service-grid">
+
+    <div class="service-card">
+      <h3>定期清掃</h3>
+      <p>商業施設・店舗・ビル・病院等</p>
+    </div>
+
+    <div class="service-card">
+      <h3>空調設備管理</h3>
+      <p>分解洗浄・設置</p>
+    </div>
+
+    <div class="service-card">
+      <h3>炭化水素補填工事</h3>
+      <p>株式会社ビジネスプロデュース<br> 
+        アライアンスパートナー</p>
+    </div>
+
+    <div class="service-card">
+      <h3>消毒・防菌作業</h3>
+    </div>
+
+    <div class="service-card">
+      <h3>リフォーム・塗装工事</h3>
+    </div>
+
+  </div>
+</section>
+
+<section id="company" class="fade-up">
+  <h2>会社概要</h2>
+  <p class="section-sub">Company</p>
+  <table class="company-table">
+    <tr>
+      <th>会社名</th>
+      <td>株式会社Nexus innovation</td>
+    </tr>
+    <tr>
+      <th>代表取締役社長</th>
+      <td>有本 康平</td>
+    </tr>
+    <tr>
+      <th>所在地</th>
+      <td>愛知県名古屋市中川区応仁町2-14 Brace 103</td>
+    </tr>
+    <tr>
+      <th>設立</th>
+      <td>2024年</td>
+    </tr>
+    <tr>
+      <th>事業内容</th>
+      <td>建物総合メンテナンス</td>
+    </tr>
+    <tr>
+      <th>資本金</th>
+      <td>100万円</td>
+    </tr>
+  </table>
+</section>
+
+<section id="contact" class="fade-up">
+  <h2>お問い合わせ</h2>
+  <p class="section-sub">Contact</p>
+  <p class="contact-text">
+    ご相談、お見積りは電話・メール、または専用ページより承ります。
+  </p>
+
+  <div class="contact-direct">
+    <div>
+      <div class="contact-label">TEL</div>
+      <a href="tel:0529902068" class="contact-value">052-990-2068</a>
+    </div>
+    <div>
+      <div class="contact-label">MAIL</div>
+      <a href="mailto:info@nexus-innovation.co.jp" class="contact-value">
+        info@nexus-innovation.co.jp
+      </a>
+    </div>
+  </div>
+
+  <div class="center">
+    <a href="contact.html" class="contact-button">お問い合わせはこちら</a>
+  </div>
+</section>
+
+<script>
+  const fadeElements = document.querySelectorAll('.fade-up');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.15
+  });
+
+  fadeElements.forEach(el => observer.observe(el));
+</script>
+
+<script>
+  window.addEventListener("load", () => {
+    const splash = document.getElementById("splash");
+
+    setTimeout(() => {
+      splash.classList.add("splash-out");
+
+      setTimeout(() => {
+        splash.style.display = "none";
+      }, 1000);
+
+    }, 2000);
+  });
+</script>
+
+</body>
+</html>
