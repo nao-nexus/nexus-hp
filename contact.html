@@ -70,22 +70,23 @@
 
 <h1>お問い合わせ</h1>
 
-<form>
+<form action="https://formspree.io/f/mqewzykq" method="POST">
+
   <label>会社名 <span class="required">※必須</span></label>
-  <input type="text" required>
+  <input type="text" name="company" required>
 
   <label>ご担当者名 <span class="required">※必須</span></label>
-  <input type="text" required>
+  <input type="text" name="name" required>
 
   <label>メールアドレス <span class="required">※必須</span></label>
-  <input type="email" required>
+  <input type="email" name="email" required>
 
   <label>お問い合わせ内容</label>
-  <textarea></textarea>
+  <textarea name="message"></textarea>
 
   <button type="submit">送信する</button>
-</form>
 
+</form>
 <div class="privacy-box">
   <p>
     お問い合わせにより取得した個人情報は、対応の目的のみに使用し、
